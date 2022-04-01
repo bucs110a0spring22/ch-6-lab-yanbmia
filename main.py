@@ -24,6 +24,7 @@ def seq3np1(n):
 print(seq3np1(3))
 
 num = int(input("Enter # for upper bound range:"))
+
 def main(num):
   start = 0
   if num < 0:
@@ -46,9 +47,18 @@ def setupWindow():
     result = seq3np1(i)
     if result > max_so_far:
       max_so_far = result
-    
+  x_val = main(num) + 10
+  y_val = max_so_far + 10
+  turtle.setworldcoordinates(0,0,x_val,y_val)
   
+def setupAxis():
+  bert.goto(0,0)
+  bert.goto(10,0)
+  bert.goto(0,0)
+  bert.goto(0,10)
 
+
+setupAxis()
 setupWindow()
 
 
